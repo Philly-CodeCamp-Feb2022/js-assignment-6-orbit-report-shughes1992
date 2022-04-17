@@ -1,3 +1,5 @@
+import { style } from "@angular/animations";
+
 export class Satellite {
 
 	name: string;
@@ -15,9 +17,10 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
-   }
-
+		if (this.type.toLowerCase() === 'space debris') {
+			return true;
+		}
+	}
 }
 
 // TODO 3a: fix isSpaceDebris check
